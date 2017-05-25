@@ -1,0 +1,104 @@
+{% extends "layouts/default.html" %}
+
+
+	 {# Product Card #}
+{% macro productCard(product) %}
+
+<div class="portfolio-item {% for cat in product.categories %} {{ cat.key }} {% endfor %} span scheme-default">
+	<div class="inner-content">
+		<div class="image hoverlay">
+			<a href="#" target="_self"><img src="{{ product.productImage.url }}" class="attachment-thumb-normal" alt="echo $campo->titulo;"/></a>
+			<div class="overlay">
+				<div class="overlay-content">
+					<div class="overlay-icons">
+					</div>
+					<div class="info">
+						<h3><a href="/produtos/{{ product.slug }}" target="_self" title="{{ product.slug }}">{{ product.title }}</a></h3>
+						<div class="hr">
+							<span></span>
+						</div>
+						<h5><a href="/produtos/{{ product.slug }}" rel="tag"></a>{% for cat in product.categories %} {{ cat.name }} {% endfor %}</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endmacro %}
+
+
+
+{% block content %}
+
+ <!-- Static Page Titlebar -->
+<section id="titlebar" class="titlebar titlebar-type-solid border-yes titlebar-scheme-dark titlebar-alignment-justify titlebar-valignment-center titlebar-size-normal enable-hr-no" data-height="80" data-rs-height="yes">
+<div class="titlebar-wrapper">
+	<div class="titlebar-content">
+		<div class="container">
+			<div class="row-fluid">
+				<div class="titlebar-heading">
+					<h1><span>Produtos</span></h1>
+					<div class="hr hr-border-primary double-border border-small">
+						<span></span>
+					</div>
+				</div>
+				<div id="breadcrumbs">
+					<span class="breadcrumb-title">Você está aqui:</span><span><a href="/">Home</a></span><span class="separator">/</span><span class="current">Produtos</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+    <div class="fullwidth">
+        <section id="section_1523237272" class="section content-box full-width section-border-no section-bborder-no section-height-content section-bgtype-image section-fixed-background-no section-bgstyle-stretch section-triangle-no triangle-location-top parallax-section-no section-overlay-no section-overlay-dot-no " style="padding-top:0;padding-bottom:0;background-color:#ffffff;" data-video-ratio="" data-parallax-speed="1">
+        <div class="section-overlay" style="">
+        </div>
+        <div class="container section-content">
+            <div class="row-fluid">
+                <div class="row-fluid equal-cheight-no element-padding-default element-vpadding-default">
+                    <div class="section-column span12" style="">
+                        <div class="inner-content content-box textnone" style="padding-top:0px;padding-bottom:0px;padding-left:0px;padding-right:0px;">
+                            <div class="portfolio-tabs scheme1 portfolio-tabs-align-right portfolio-tabs-blackbox clearfix">
+                                <div class="portfolio-tabs-container">
+                                    <ul class="clearfix">
+                                        <li class="sort-label">Ordenar por :</li>
+                                    	<li class="sort-item active"><a data-filter="*" href="#">Todos</a></li>
+											{# loop through product categories #}
+										{% for category in data.categories %}
+                                        	<li class="sort-item"><a data-filter=".{{ category.key }}" href="#">{{ category.name }}</a></li>
+										{% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+							
+							{#{% for product in data.products %}
+							<h1> url> {{product.productImage.url}}</h1>
+							{% endfor %}        #}
+							{#<h1>dados </h1>
+                            <p>{{ data.dados }}</p>
+							<p>
+								{% for product in data.products.results %} 
+                                    {{ product.title }}
+                                    {% for category in product.categories %}
+                                        <ul>
+                                           <li> {{ category.key }} </li>
+                                        </ul>
+                                    {% endfor %}
+                                {% endfor %}		                            
+                            </p>#}
+                            <div id="portfolio_1685034774" class="portfolio padding-no">
+                                <div class="row-fluid portfolio-items bg-style-white sortable-items portfolio-style1 columns-4 love-it-no enable-hr-yes hr-type-tiny hr-color-light hr-style-double element-padding-no info-style-center element-vpadding-default info-onhover-yes " data-columns="4" data-animation-delay="100" data-animation-effect="" data-masonry-layout="no" style="opacity: 1; position: relative; height: 514px;">
+									{% for product in data.products.results %} {{ productCard(product) }} {% endfor %}		
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+    </div>
+
+{% endblock %}
+

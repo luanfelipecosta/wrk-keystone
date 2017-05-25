@@ -1,0 +1,326 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+	{#<div class="container">
+		<div class="jumbotron">
+			<img src="/images/logo.svg" width="160">
+			<h1>Welcome</h1>
+			<p>This is your new <a href="http://keystonejs.com" target="_blank">KeystoneJS</a> website.</p>
+			<p>
+				It includes the latest versions of
+				<a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>
+				and <a href="http://www.jquery.com/" target="_blank">jQuery</a>.
+			</p>
+			<p>Visit the <a href="http://keystonejs.com/guide" target="_blank">Getting Started</a> guide to learn how to customise it.</p>
+			<hr>
+			{% if user and user.canAccessKeystone %}
+				<p>
+					<a href="/keystone" class="btn btn-lg btn-primary">Open the Admin UI</a>
+				</p>
+			{% else %}
+				<p>We have created a default Admin user for you with the email <strong>user@keystonejs.com</strong> and the password <strong>admin</strong>.</p>
+				<p>
+					<a href="/keystone/signin" style="margin-right: 10px" class="btn btn-lg btn-primary">Sign in</a>
+					to use the Admin UI.
+				</p>
+			{% endif %}
+			<hr>
+			<p>
+				Remember to <a href="https://github.com/keystonejs/keystone" target="_blank">Star KeystoneJS on GitHub</a> and
+				<a href="https://twitter.com/keystonejs" target="_blank">follow @keystonejs</a> on twitter for updates.
+			</p>
+		</div>
+	</div>#}
+	<!-- Rev Slider Start -->
+    <div id="rev_slider_1_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" style="margin:0px auto;background-color:#E9E9E9;padding:0px;margin-top:0px;margin-bottom:0px;max-height:600px;">
+        <!-- START REVOLUTION SLIDER 4.6.5 fullwidth mode -->
+        <div id="rev_slider_1_1" class="rev_slider fullwidthabanner" style="display:none;max-height:600px;height:600px;">
+            <ul>
+                <!-- SLIDE  -->
+                <li data-transition="fade" data-slotamount="7" data-masterspeed="300" data-saveperformance="off">
+                    <!-- MAIN IMAGE -->
+                    <img src="images/slides/03.jpg" alt="shutterstock_202832599" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
+                    <!-- LAYERS -->
+                    <!-- LAYER NR. 1 -->
+                    <div class="tp-caption brad-heading sfb tp-resizeme" data-x="0" data-hoffset="-25" data-y="center" data-voffset="-85" data-speed="500" data-start="500" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
+                        Leve o que quiser, 
+                        <br/> para onde quiser
+                    </div>
+                    <!-- LAYER NR. 2 -->
+                    <div class="tp-caption brad-sub-heading sfb tp-resizeme" data-x="0" data-hoffset="-25" data-y="center" data-voffset="0" data-speed="500" data-start="1000" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">
+                        Reboques fazendiha sob-medida personalizados para atender <br> a SUA necessidade! Ideal para transporte rural.
+                    </div>
+                    <!-- LAYER NR. 3 -->
+                    <div class="tp-caption brad-buttons sfb tp-resizeme" data-x="0" data-hoffset="-18" data-y="center" data-voffset="85" data-speed="500" data-start="1500" data-easing="Power2.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;">
+                        <a href="#" class="button button_large button_green">Ver Produto</a>
+                    </div>
+                </li>
+                <!-- SLIDE  -->
+                <li data-transition="fade" data-slotamount="7" data-masterspeed="300" data-saveperformance="off">
+                    <!-- MAIN IMAGE -->
+                    <img src="images/slides/04.jpg" alt="shutterstock_178724276" data-bgposition="right top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                    <!-- LAYERS -->
+                    <!-- LAYER NR. 1 -->
+                    <div class="tp-caption brad-heading sfb tp-resizeme" data-x="25" data-y="center" data-voffset="-70" data-speed="500" data-start="500" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
+                        Reboques veículares <br>
+                        Para carros &amp; motos
+                    </div>
+                    <!-- LAYER NR. 2 -->
+                    <div class="tp-caption brad-sub-heading sfb tp-resizeme" data-x="25" data-y="center" data-voffset="20" data-speed="500" data-start="1000" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">
+                        Transporte veículos com segurança e conforto
+                    </div>
+                    <!-- LAYER NR. 3 -->
+                    <div class="tp-caption brad-buttons sfb tp-resizeme" data-x="18" data-y="center" data-voffset="105" data-speed="500" data-start="1500" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;">
+                        <a href="#" class="button button_large button_green">Ver Produtos</a>
+                    </div>
+                </li>
+                <!-- SLIDE  -->
+                <li data-transition="fade" data-slotamount="7" data-masterspeed="300" data-saveperformance="off">
+                    <!-- MAIN IMAGE -->
+                    <img src="images/slides/05.jpg" alt="shutterstock_221639593" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                    <!-- LAYERS -->
+                    <!-- LAYER NR. 1 -->
+                    <div class="tp-caption brad-heading sfb tp-resizeme" data-x="25" data-y="center" data-voffset="-75" data-speed="500" data-start="500" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
+                        seja qual for seu negócio
+                        <br/> temos o produto ideal 
+                    </div>
+                    <!-- LAYER NR. 2 -->
+                    <div class="tp-caption brad-sub-heading sfb tp-resizeme" data-x="25" data-y="center" data-voffset="10" data-speed="500" data-start="1000" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">
+                        Reboques baú, excelente para transporte de produtos &amp; ferramentas 
+                    </div>
+                    <!-- LAYER NR. 3 -->
+                    <div class="tp-caption brad-buttons sfb tp-resizeme" data-x="18" data-y="center" data-voffset="98" data-speed="500" data-start="1500" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;">
+                        <a href="#" class="button button_large button_green">Ver Produto</a>
+                </li>
+                
+            </ul>
+            <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;">
+            </div>
+        </div>
+    </div>
+    <!-- END REVOLUTION SLIDER -->
+    <!-- Rev Slider End -->
+
+	<section class="section content-box grid-940 section-border-no section-bborder-no section-height-content section-bgtype-image section-fixed-background-no section-bgstyle-stretch section-triangle-yes triangle-location-top parallax-section-no section-overlay-no section-overlay-dot-no " data-video-ratio="" data-parallax-speed="1" style="padding-top:80px;">
+        <div class="section-overlay" style="">
+        </div>
+        <div class="container section-content">
+            <div class="row-fluid">
+                <div class="row-fluid equal-cheight-no element-padding-default element-vpadding-medium">
+                    <div class="section-column span12" style="">
+                        <div class="inner-content content-box textnone" id="div_c1fb_4">
+                            <div class="column-text ">
+                            </div>
+                            {#<h5 class="title textcenter default bw-2px dh-2px divider-dark bc-dark dw-default color-default" id="h5_c1fb_0"><span>esclarece algumas das </span>#}
+                            </h5>
+                            <h1 class="title textcenter default bw-defaultpx dh-defaultpx divider-dark bc-default dw-default color-default" id="h1_c1fb_0"><span> Duvidas Frequentes</span>
+                            </h1>
+                            <div class="hr border-small dh-2px aligncenter hr-border-primary" id="div_c1fb_5">
+                                <span></span>
+                            </div>
+                            <div id="feature_boxes_container_1219976850" class="clearfix">
+                                <div id="feature_boxes_2" class="row-fluid style1 background-shadow-no feature_boxes box-style1 enable-hr-no element-vpadding-medium2 hr-type-tiny hr-color-light hr-style-2px large-size element-inner-vertical-padding-medium element-inner-horizental-padding-medium icon-side-left iconbox-style2 align-content-center-no align-icon-center-no columns-2 crease-background-no content-box default element-padding-medium ">
+                                    <div class="span">
+                                        <div class="inner-content " data-animation-delay="0" data-animation-effect="">
+                                            <div class="feature_box no-content">
+                                                <span class="brad-icon " data-animation-delay="0" data-animation-effect=""><i class="fa-icon_lightbulb_alt"></i></span>
+                                                <div class="heading">
+                                                    <div class="heading-content">
+                                                        <h6><strong>Qual a CNH preciso para puxar um reboque? 
+                                                        <br>R:</strong> 
+                                                        Desde que o reboque não ultrapasse 3.500 kg de Peso Bruto Total, o condutor deverá possuir carteira “B”.</h6>
+                                                    </div>
+                                                    <div class="hr">
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="span">
+                                        <div class="inner-content " data-animation-delay="0" data-animation-effect="">
+                                            <div class="feature_box no-content">
+                                                <span class="brad-icon " data-animation-delay="0" data-animation-effect=""><i class="fa-icon_lightbulb_alt"></i></span>
+                                                <div class="heading">
+                                                    <div class="heading-content">
+                                                        <h6><strong>Quando é obrigatório o reboque ter freios?
+                                                        <br>R:</strong> 
+                                                        Todo reboque com capacidade de carga a partir de 750 kg é obrigatório possuir freios. Abaixo desta capacidade passa a ser opcional.</h6>
+                                                    </div>
+                                                    <div class="hr">
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="span">
+                                        <div class="inner-content " data-animation-delay="0" data-animation-effect="">
+                                            <div class="feature_box no-content">
+                                                <span class="brad-icon " data-animation-delay="0" data-animation-effect=""><i class="fa-icon_lightbulb_alt"></i></span>
+                                                <div class="heading">
+                                                    <div class="heading-content">
+                                                        <h6><strong> Como faço para registrar o reboque junto ao Detran?
+                                                        <br>R:</strong> 
+                                                        O registro ou 1º emplacamento de um reboque adquirido de um fabricante homologado perante ao DENATRAN, segue o mesmo procedimento que o de um carro 0 km. </h6>
+                                                    </div>
+                                                    <div class="hr">
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="span">
+                                        <div class="inner-content " data-animation-delay="0" data-animation-effect="">
+                                            <div class="feature_box no-content">
+                                                <span class="brad-icon " data-animation-delay="0" data-animation-effect=""><i class="fa-icon_lightbulb_alt"></i></span>
+                                                <div class="heading">
+                                                    <div class="heading-content">
+                                                        <h6><strong> Reboque paga IPVA?
+                                                        <br>R:</strong> 
+                                                        Não. O IPVA é um imposto cobrado sobre veículos automotores, como o próprio nome já diz. Todos os veículos não automotores, reboques, semi-reboques, trailer entre outros, são isentos deste imposto.  </h6>
+                                                    </div>
+                                                    <div class="hr">
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+{% endblock %}
+
+{% block js %}
+ <script type="text/javascript">
+        /******************************************
+			-	PREPARE PLACEHOLDER FOR SLIDER	-
+		******************************************/
+        var setREVStartSize = function() {
+            var tpopt = new Object();
+            tpopt.startwidth = 1150;
+            tpopt.startheight = 600;
+            tpopt.container = jQuery('#rev_slider_1_1');
+            tpopt.fullScreen = "off";
+            tpopt.forceFullWidth = "off";
+            tpopt.container.closest(".rev_slider_wrapper").css({
+                height: tpopt.container.height()
+            });
+            tpopt.width = parseInt(tpopt.container.width(), 0);
+            tpopt.height = parseInt(tpopt.container.height(), 0);
+            tpopt.bw = tpopt.width / tpopt.startwidth;
+            tpopt.bh = tpopt.height / tpopt.startheight;
+            if (tpopt.bh > tpopt.bw) tpopt.bh = tpopt.bw;
+            if (tpopt.bh < tpopt.bw) tpopt.bw = tpopt.bh;
+            if (tpopt.bw < tpopt.bh) tpopt.bh = tpopt.bw;
+            if (tpopt.bh > 1) {
+                tpopt.bw = 1;
+                tpopt.bh = 1
+            }
+            if (tpopt.bw > 1) {
+                tpopt.bw = 1;
+                tpopt.bh = 1
+            }
+            tpopt.height = Math.round(tpopt.startheight * (tpopt.width / tpopt.startwidth));
+            if (tpopt.height > tpopt.startheight && tpopt.autoHeight != "on") tpopt.height = tpopt.startheight;
+            if (tpopt.fullScreen == "on") {
+                tpopt.height = tpopt.bw * tpopt.startheight;
+                var cow = tpopt.container.parent().width();
+                var coh = jQuery(window).height();
+                if (tpopt.fullScreenOffsetContainer != undefined) {
+                    try {
+                        var offcontainers = tpopt.fullScreenOffsetContainer.split(",");
+                        jQuery.each(offcontainers, function(e, t) {
+                            coh = coh - jQuery(t).outerHeight(true);
+                            if (coh < tpopt.minFullScreenHeight) coh = tpopt.minFullScreenHeight
+                        })
+                    } catch (e) {}
+                }
+                tpopt.container.parent().height(coh);
+                tpopt.container.height(coh);
+                tpopt.container.closest(".rev_slider_wrapper").height(coh);
+                tpopt.container.closest(".forcefullwidth_wrapper_tp_banner").find(".tp-fullwidth-forcer").height(coh);
+                tpopt.container.css({
+                    height: "100%"
+                });
+                tpopt.height = coh;
+            } else {
+                tpopt.container.height(tpopt.height);
+                tpopt.container.closest(".rev_slider_wrapper").height(tpopt.height);
+                tpopt.container.closest(".forcefullwidth_wrapper_tp_banner").find(".tp-fullwidth-forcer").height(tpopt.height);
+            }
+        };
+        /* CALL PLACEHOLDER */
+        setREVStartSize();
+        var tpj = jQuery;
+        tpj.noConflict();
+        var revapi1;
+        tpj(document).ready(function() {
+            if (tpj('#rev_slider_1_1').revolution == undefined) {
+                revslider_showDoubleJqueryError('#rev_slider_1_1');
+            } else {
+                revapi1 = tpj('#rev_slider_1_1').show().revolution({
+                    dottedOverlay: "none",
+                    delay: 9000,
+                    startwidth: 1150,
+                    startheight: 600,
+                    hideThumbs: 200,
+                    thumbWidth: 100,
+                    thumbHeight: 50,
+                    thumbAmount: 3,
+                    simplifyAll: "off",
+                    navigationType: "bullet",
+                    navigationArrows: "solo",
+                    navigationStyle: "round",
+                    touchenabled: "on",
+                    onHoverStop: "on",
+                    nextSlideOnWindowFocus: "off",
+                    swipe_threshold: 0.7,
+                    swipe_min_touches: 1,
+                    drag_block_vertical: false,
+                    keyboardNavigation: "on",
+                    navigationHAlign: "center",
+                    navigationVAlign: "bottom",
+                    navigationHOffset: 0,
+                    navigationVOffset: 20,
+                    soloArrowLeftHalign: "left",
+                    soloArrowLeftValign: "center",
+                    soloArrowLeftHOffset: 0,
+                    soloArrowLeftVOffset: 0,
+                    soloArrowRightHalign: "right",
+                    soloArrowRightValign: "center",
+                    soloArrowRightHOffset: 0,
+                    soloArrowRightVOffset: 0,
+                    shadow: 0,
+                    fullWidth: "on",
+                    fullScreen: "off",
+                    spinner: "spinner0",
+                    stopLoop: "off",
+                    stopAfterLoops: -1,
+                    stopAtSlide: -1,
+                    shuffle: "off",
+                    autoHeight: "off",
+                    forceFullWidth: "off",
+                    hideTimerBar: "false",
+                    hideThumbsOnMobile: "off",
+                    hideNavDelayOnMobile: 1500,
+                    hideBulletsOnMobile: "off",
+                    hideArrowsOnMobile: "off",
+                    hideThumbsUnderResolution: 0,
+                    hideSliderAtLimit: 0,
+                    hideCaptionAtLimit: 0,
+                    hideAllCaptionAtLilmit: 0,
+                    startWithSlide: 0
+                });
+            }
+        }); /*ready*/
+    </script>
+{% endblock %}

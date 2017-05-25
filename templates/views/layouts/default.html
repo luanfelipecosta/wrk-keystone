@@ -1,0 +1,266 @@
+{% import "mixins/flash-messages.html" as FM %}
+<!doctype html>
+<html>
+
+
+	<head>
+			<!-- Meta Tags -->
+		<meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+		<meta name="description" content="Bem vindo a WRKFORT em São José dos Campos - SP, carretinhas, reboques, articulados, trailers">
+		<meta name="keywords" content="reboques, sjc, sao jose dos campos, carretinhas, reboque moto, moto, reboque baú, reboque para carro, transporte, carga, materiais, material, trailers, aço, inox, "> 
+		<meta name="author" content="Luan Costa, (12)981152989"> 
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<title>{{ title | default("WRKFort - Reboques, carrocerias, carretas, veículos especiais") }}</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		
+		<link rel='stylesheet' href='/revslider/rs-plugin/css/settings.css' type='text/css' media='all'/>
+		<link rel='stylesheet' href='/styles/wrkfort/instag-slider.css' type='text/css' media='all'/>
+		<link rel='stylesheet' href='/styles/wrkfort/style.css' type='text/css' media='all'/>
+		<link rel='stylesheet' href='/styles/wrkfort/layout.css' type='text/css' media='all'/>
+		<link rel='stylesheet' href='/styles/wrkfort/main.css' type='text/css' media='all'/>
+		<link rel='stylesheet' href='/styles/wrkfort/shortcodes.css' type='text/css' media='all'/>
+		<link rel='stylesheet' href='/styles/wrkfort/mediaelementplayer.min.css' type='text/css' media='all'/>
+		<link rel='stylesheet' href='/styles/wrkfort/woocommerce.css' type='text/css' media='all'/>
+		<link rel='stylesheet' href='/styles/wrkfort/prettyPhoto.css' type='text/css' media='all'/>
+		<link rel='stylesheet' href='/styles/wrkfort/responsive.css' type='text/css' media='all'/>
+		<link rel='stylesheet' href='/styles/wrkfort/js_composer.css' type='text/css' media='all'/>
+		<link rel='stylesheet' href='/styles/wrkfort/default.css' type='text/css' media='screen'/>
+		<link rel='stylesheet' href='/styles/wrkfort/fontawesome.css' type='text/css' media='screen'/>
+		<link rel='stylesheet' href='/styles/wrkfort/font-awesome.css' type='text/css' media='screen'/>
+
+		<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+
+
+
+		{# This file provides the default styling for the KeystoneJS Content Editor #}
+		{% if user and user.canAccessKeystone %}
+			<link href="/keystone/styles/content/editor.min.css" rel="stylesheet">
+		{% endif %}
+
+		{# HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+		   Safely remove this block if you are not targeting IE8 #}
+		<!--[if lt IE 9]>
+			<script src="//cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.js"></script>
+			<script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+		{# Include template-specific stylesheets by extending the css block #}
+		{% block css %}{% endblock %}
+
+		{# Add any other template-specific HEAD tags by extending the head block #}
+		{% block head %}{% endblock %}
+	</head>
+	<body>
+		{# HEADER #}
+		<div id="header">
+			<div id="mobile_navigation">
+				<a id="close-mobile-menu" href="#">X</a>
+				<ul id="mobile_menu" class="mobile_menu">
+					{# Customise site's navigation by changing the navLinks Array in ./routes/middleware.js #}
+					{% for link in navLinks %}
+						<li class="{{ 'active' if link.key == section else '' }} menu-item">
+							<a href="{{ link.href }}">{{ link.label }}</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+		<div id="header_wrapper" class=" solid-header header-scheme-light type1">
+			<div class="header_container">
+				<div id="header" class="header-v1 second-nav" data-height="110" data-shrinked-height="65" data-auto-offset="1" data-offset="0" data-second-nav-offset="0">
+					<section id="main_navigation" class="header-nav shrinking-nav">
+						<div class="container">
+							<div id="main_navigation_container" class="row-fluid">
+								<div class="row-fluid">
+									<!-- logo -->
+									<div class="logo-container">
+										<a id="logo" href="/">
+											<img src="/images/logo.png" class="default-logo" alt="Aperio">
+											<img src="/images/logowhite.png" class="white-logo" alt="Aperio">
+										</a>
+									</div>
+									<!-- Tooggle Menu will displace on mobile devices -->
+									<div id="mobile-menu-container">
+										<a class="toggle-menu" href="#"><i class="fa-navicon"></i></a>
+									</div>
+									<nav class="nav-container">
+										<ul id="main_menu" class="main_menu">
+											{% for link in navLinks %}
+												<li class="{{ 'active' if link.key == section else '' }} menu-item">
+													<a href="{{ link.href }}">{{ link.label }}</a>
+												</li>
+											{% endfor %}                           
+										</ul>
+									</nav>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+
+		{# BODY #}
+		<div id="body">
+			{# NOTE:
+			   There is no .container wrapping class around body blocks to allow more flexibility in design.
+			   Remember to include it in your templates when you override the intro and content blocks! #}
+
+			{# The Intro block appears above flash messages (used for temporary information display) #}
+			{% block intro %}{% endblock %}
+
+			{# Flash messages allow you to display once-off status messages to users, e.g. form
+			   validation errors, success messages, etc. #}
+			{{ FM.flashMessages(messages) }}
+
+			{# The content block should contain the body of your template"s content #}
+			{% block content %}{% endblock %}
+		</div>
+
+
+		{# FOOTER #}
+		<footer id="footer" class="cover-padding-no">
+			<div class="footer-widgets headline-bg-transparent">
+				<div class="container">
+					<div class="row-fluid">
+						<div class="footer-widget-container row-fluid">
+							<div id="text-2" class="widget widget_meta widget_text span4">
+								<h4>Fale conosco</h4>
+								<div class="textwidget">
+									Rua Arcilio Moreira da Silva nº 51 Residencial Gazzo São José dos Campos - SP
+									<br/> E-mail: contato@wrkfort.com
+									<br/> Tel: (12) 3307-6191 / (12) 3322-3735
+									<div class="gap" style="height:10px">
+									</div>
+									<ul id="brad_icons_1" class="brad-icons medium style1 icons-align-">
+										<li><a href="#" title="Facebook" target="_self"><i class="fa fa-facebook"></i></a></li>
+									</ul>
+								</div>
+							</div>
+							<div id="recent-posts-3" class="widget widget_meta widget_recent_entries span3">
+								<h4>Links</h4>
+								<ul>
+									<li>
+										<a href="#">Home</a>
+									</li>
+									<li>
+										<a href="#">Sobre</a>
+									</li>
+									<li>
+										<a href="#">Produtos</a>
+									</li>
+									<li>
+										<a href="#">Contato</a>
+									</li>
+									<li>
+										<a href="/keystone">admin panel</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="copyright">
+				<div class="container">
+					<div class="row-fluid">
+						<div class="row-fluid">
+							<div class="copyright-text copyright-left">
+								 Todos os direitos Reservados &copy; Desenvolvido por <a href='http://nxcreative.com.br'>NX Creative</a>
+							</div>
+							<div class="textright copyright-right">
+								<a class="go-top readmore" href="#"><span>Voltar ao Topo</span><span class="brad-icon"><i class="fa fa-caret-up"></i></span></a>
+								<!-- Top Bar Social Icons END -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+
+		{# JAVASCRIPT #}
+
+		{# jQuery 1.11.3 is included by default, and required by both Bootstrap
+			and the KeystoneJS Content Editor. If you are not targeting IE8,
+			you can upgrade to 2.1.4 (also bundled) for better performance. #}
+		<script type='text/javascript' src='/js/jquery/jquery.js'></script>
+
+		{# Customise which Bootstrap javascript files are served by including
+			them specifically here, instead of bootstrap-3.3.5.min.js #}
+		<script src="/js/bootstrap/bootstrap-3.3.5.min.js"></script>
+
+		{# The KeystoneJS Content Editor provides support for ks-editable data attributes,
+			which generate links to edit content for users who can access Keystone #}
+		{% if user and user.canAccessKeystone %}
+			<script src="/keystone/js/content/editor.js"></script>
+		{% endif %}
+
+		<script type='text/javascript' src='/js/jquery/jquery-migrate.min.js'></script>
+		<script type='text/javascript' src='/revslider/rs-plugin/js/jquery.themepunch.tools.min.js'></script>
+		<script type='text/javascript' src='/revslider/rs-plugin/js/jquery.themepunch.revolution.min.js'></script>
+		<script type='text/javascript' src='/js/jquery.flexslider-min.js'></script>
+		<script type='text/javascript' src='/js/frontend/add-to-cart.min.js'></script>
+		<script type='text/javascript' src='/js/jquery-blockui/jquery.blockUI.min.js'></script>
+		<script type='text/javascript' src='/js/frontend/woocommerce.min.js'></script>
+		<script type='text/javascript' src='/js/jquery-cookie/jquery.cookie.min.js'></script>
+		<script type='text/javascript' src='/js/frontend/cart-fragments.min.js'></script>
+		<script type='text/javascript' src='/js/brad-love.js'></script>
+		<script type='text/javascript' src='/js/modernizr.js'></script>
+		<script type='text/javascript' src='/js/fitvids.min.js'></script>
+		<script type='text/javascript' src='/js/prettyPhoto.js'></script>
+		<script type='text/javascript' src='/js/plugins.js'></script>
+		<script type='text/javascript' src='/js/skrollr.js'></script>
+		<script type='text/javascript' src='/js/imagesloaded.js'></script>
+		<script type='text/javascript' src='/js/jquery.scrollTo.min.js'></script>
+		<script type='text/javascript' src='/js/waypoints.min.js'></script>
+		<script type='text/javascript' src='/js/isotope.pkgd.min.js'></script>
+		<script type='text/javascript' src='/js/bxslider.min.js'></script>
+		<script type='text/javascript' src='/js/caroufred.js'></script>
+		<script type='text/javascript' src='/js/main.min.js'></script>
+		<script type='text/javascript' src='/js/contact-form.js'></script>
+
+		{# Include template-specific javascript files by extending the js block #}
+		{% block js %}{% endblock %}
+
+
+		
+
+
+		<!-- Custom Scripts -->
+		<script type="text/javascript">
+			(function($){
+				'use strict';
+				jQuery(document).ready(function($){ 
+				var retina = window.devicePixelRatio > 1 ? true : false;
+							if(retina) {
+						jQuery('#logo .default-logo').attr('src', 'images/logo_2x.png');
+						jQuery('#logo img').css('max-width', '110px');
+									jQuery('#logo .white-logo').attr('src', 'images/logowhite_2x.png');
+											}
+					/* ------------------------------------------------------------------------ */
+					/* Add PrettyPhoto */
+					/* ------------------------------------------------------------------------ */
+					var lightboxArgs = {            
+									animation_speed: 'fast',
+									overlay_gallery: true,
+						autoplay_slideshow: false,
+									slideshow: 5000, /* light_rounded / dark_rounded / light_square / dark_square / facebook */
+												theme: 'pp_default', 
+												opacity: 0.8,
+									show_title: true,
+									deeplinking: false,
+						allow_resize: true,             /* Resize the photos bigger than viewport. true/false */
+						counter_separator_label: '/',   /* The separator for the gallery counter 1 "of" 2 */
+						default_width: 1200,
+						default_height:640
+					};
+					jQuery("a[data-gal^='prettyPhoto']").prettyPhoto(lightboxArgs);
+						});
+			}(jQuery))  
+		</script>
+	</body>
+</html>

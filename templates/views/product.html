@@ -1,0 +1,85 @@
+{% extends "layouts/default.html" %}
+
+{% block js %}
+	<script type='text/javascript' src='/js/product-slider.js'></script>
+{% endblock %}
+{% block css %}
+	<link rel='stylesheet' href='/styles/product-slider.css' type='text/css' media='all'/>
+{% endblock %}
+
+{% block content %} 
+ 
+ <!-- Static Page Titlebar -->
+<section id="titlebar" class="titlebar titlebar-type-solid border-yes titlebar-scheme-dark titlebar-alignment-justify titlebar-valignment-center titlebar-size-normal enable-hr-no" data-height="80" data-rs-height="yes">
+<div class="titlebar-wrapper">
+	<div class="titlebar-content">
+		<div class="container">
+			<div class="row-fluid">
+				<div class="titlebar-heading">
+					<h1><span>{{ data.product.title }}</span></h1>
+					<div class="hr hr-border-primary double-border border-small">
+						<span></span>
+					</div>
+				</div>
+				<div id="breadcrumbs">
+					<span class="breadcrumb-title">Você está aqui:</span>
+					<span><a href="/">Home</a>
+						</span><span class="separator">/</span>
+					<span><a href="/produtos">Todos os modelos</a>
+						</span><span class="separator">/</span>
+					<span class="current">{{ data.product.title }}</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<section class="section" style="padding-top:80px; padding-bottom:20px; background: #fff;">
+	<div class="container">
+		<div class="row-fluid">
+			<div class="row-fluid">
+				<div class="span8">
+					<div id="slider-wrap">
+						<ul id="slider" style="margin:0;">
+							{% for image in data.product.images %}
+							<li data-color="#1abc9c">
+								<div class="product-slide" style="background-image: url('{{ image.url }}');">
+									
+								</div>
+
+							</li>
+							{% endfor %}
+						</ul>
+
+						<!--controls-->
+						<div class="btns" id="next"><i class="fa fa-arrow-right"></i>
+						</div>
+						<div class="btns" id="previous"><i class="fa fa-arrow-left"></i>
+						</div>
+						<div id="counter"></div>
+
+						<div id="pagination-wrap">
+							<ul>
+							</ul>
+						</div>
+						<!--controls-->
+
+					</div>
+				</div>
+				<div class="span4">
+					<div class="inner-content">
+						<h3 class="portfolio-single-heading title style1 bw-2px dh-2px divider-primary bc-dark dw-default color-default" style="margin-bottom:30px;"><span>Informações</span></h3>
+						<div class="product-description">
+							{{ data.product.description | safe }}
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</section>
+
+
+
+{% endblock %}
